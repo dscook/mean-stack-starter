@@ -1,0 +1,22 @@
+{
+  "name": "mean-stack-starter",
+  "version": "0.0.1",
+  "authors": [
+    "Daniel Cook <daniel.cook@obrussa.com>"
+  ],
+  "description": "MEAN stack starter",
+  "keywords": [
+    "MEAN",
+    "template"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "resolutions": {}
+}

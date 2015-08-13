@@ -1,0 +1,16 @@
+{
+  "name": "mean-stack-starter",
+  "version": "0.0.1",
+  "dependencies": {},
+  "scripts": {
+    "start": "gulp"
+  },
+  "description": "MEAN stack starter",
+  "main": "server.js",
+  "devDependencies": {},
+  "keywords": [
+    "MEAN",
+    "template"
+  ],
+  "author": "Daniel Cook <daniel.cook@obrussa.com>"
+}
