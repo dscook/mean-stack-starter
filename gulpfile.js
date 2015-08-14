@@ -217,9 +217,11 @@ var librariesJS = [
     '!./bower_components/foundation-apps/js/angular/app.js'
 ];
 
-// Application Javascript
+// Application Javascript, ensure AngularJS modules are defined before controllers
 var appJS = [
-    './public/modules/**/*.js'
+    './public/modules/**/module.js',
+    './public/modules/**/controller.js',
+    './public/modules/**/*.js'      // Any other javascript
 ];
 
 // BUILD TASKS
@@ -302,7 +304,7 @@ gulp.task('build-javascript', function () {
                 console.log(e);
             }))
             .pipe($.concat('internal.js'))
-            .pipe(gulp.dest('./build/'));
+            .pipe(gulp.dest('./build/assets/js/'));
 });
 
 // Builds the entire app, pass in callback so we can block until build is complete

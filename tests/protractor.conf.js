@@ -1,7 +1,7 @@
 exports.config = {
     seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: [
-    // Insert test specs here
+        // Insert test specs here
     ],
     baseUrl: "http://localhost:8080",
     onPrepare: function () {
