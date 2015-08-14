@@ -8,10 +8,6 @@ var config        = require('./config'),
     bodyParser    = require('body-parser'),
     cookieParser  = require('cookie-parser');
 
-// Start the server
-var port = process.env.PORT || clargs.port || 8080;
-http.listen(port);
-
 // Connect to database dependent on environment
 var environment = app.get('env');
 mongoose.connect(config.mongodb[environment].url);
@@ -35,15 +31,19 @@ var publicPath = 'build';
 app.use(express.static(path.join(__dirname, publicPath)));
 
 // Initialise mongoose models
-// TODO
+require('./models/User');
 
 // Initialise RESTful routes
-// TODO
+require('./routes/User')(app);
 
 // Serve layout, all requests are serve the main layout page since we are a single page application
 app.get('/*', function(req, res) {
     res.sendFile(path.resolve(__dirname, publicPath, './index.html'));
 });
+
+// Start the server
+var port = process.env.PORT || clargs.port || 8080;
+http.listen(port);
 
 // Output a log to indicate the server has started
 console.log('Server started');
