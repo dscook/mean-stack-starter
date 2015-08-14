@@ -11,6 +11,7 @@ An end-to-end MEAN stack template project with a pre-configured build system.  T
 * AngularJS single page application, sample code in the `public` directory.
 * AngularJS ui-router support, see the `public/modules` directory.
 * SASS support, see the `public/modules/scss` directory.
+# Foundation for Apps HTML/CSS framework, see http://foundation.zurb.com/apps/.
 
 ### Limitations ###
 
