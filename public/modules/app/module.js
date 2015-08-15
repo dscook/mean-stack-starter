@@ -18,7 +18,7 @@ angular
             // Declare this root state of all sub-modules abstract, i.e. we cannot navigate to it
             $stateProvider.state('app', {
                 url: '',
-                template: '<div ui-view class="grid-block"></div>',
+                template: '<div data-ui-view class="grid-block"></div>',
                 abstract: true
             });
             
