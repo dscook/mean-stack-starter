@@ -27,8 +27,6 @@ Install global dependencies:
 * Setup symbolic link due to node name clash: `sudo ln -s /usr/bin/nodejs /usr/bin/node`
 * Install npm: `sudo apt-get install npm`
 * Install mongodb: `sudo apt-get install mongodb`
-* Install ruby: `sudo apt-get install ruby`
-* Install bundler and sass: `sudo gem install bundler sass`
 * Install node global modules: `sudo npm install -g bower gulp protractor`
 * Install the latest version of the selenium web driver: `sudo webdriver-manager update`
 
@@ -38,7 +36,6 @@ Clone the project and install local dependencies:
 * Change to the project base directory: `cd mean-stack-starter`
 * Install node local modules: `npm install`
 * Install front-end dependencies: `bower install`
-* Install build dependencies: `bundle install`
 
 ### Usage ###
 
