@@ -100,7 +100,7 @@ gulp.task('mongo', function (callback) {
 // Starts the server, which you can view at http://localhost:8080
 gulp.task('start', ['mongo', 'build'], function () {
     // Watch for changes in HTML files
-    gulp.watch(['./public/*.html', 
+    gulp.watch(['./public/*.html',
                 './public/modules/**/*.html',
                 './public/img/*'], ['build-copy']);
     // Watch Sass
@@ -167,8 +167,8 @@ gulp.task('protractor', ['database-drop', 'start', 'webdriver'], function () {
             .pipe(protractor({
                 configFile: "./tests/protractor.conf.js",
                 args: ['--baseUrl', 'http://localhost:8080']
-            })) 
-            .on('error', function (e) { 
+            }))
+            .on('error', function (e) {
                 throw e });
 });
 
@@ -242,7 +242,7 @@ gulp.task('build-create-dir', function () {
 // Copies application files and Foundation assets
 gulp.task('build-copy', function () {
     // Main application HTML and images
-    gulp.src(['./public/*.html', 
+    gulp.src(['./public/*.html',
               './public/modules/**/*.html'], {
         base: './public/'
     })
@@ -258,15 +258,13 @@ gulp.task('build-copy', function () {
 });
 
 // Compiles Sass
-gulp.task('build-sass', function () {
+gulp.task('build-sass', function() {
     return gulp.src('./public/scss/app.scss')
-            .pipe($.rubySass({
-                loadPath: sassPaths,
+            .pipe($.sass({
+                includePaths: sassPaths,
                 style: envConfig[environment].sassStyle,
-                bundleExec: true
-            })).on('error', function (err) {
-                console.log(err);
-            })
+                errLogToConsole: true
+            }))
             .pipe($.autoprefixer({
                 browsers: ['last 2 versions', 'ie 10']
             }))
@@ -309,8 +307,7 @@ gulp.task('build-javascript', function () {
 
 // Builds the entire app, pass in callback so we can block until build is complete
 gulp.task('build', function (callback) {
-    sequence('build-clean', 
+    sequence('build-clean',
              'build-create-dir',
              ['build-copy', 'build-sass', 'build-javascript'], callback);
 });
-
