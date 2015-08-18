@@ -11,12 +11,13 @@
     },
     "scripts": {
         "start": "gulp",
-        "installAll": "npm install && bower install",
+        "installAll": "npm install && bower --allow-root install",
         "test": "gulp tests"
     },
     "description": "MEAN stack starter",
     "main": "server.js",
     "devDependencies": {
+        "bower": "1.4.1",
         "gulp": "3.8.11",
         "gulp-autoprefixer": "1.0.1",
         "gulp-concat": "2.4.2",

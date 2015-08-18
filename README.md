@@ -15,9 +15,13 @@ An end-to-end MEAN stack template project with a pre-configured build system.  T
 
 ### Limitations ###
 
-The Gulp build system will only work correctly on *nix machines (i.e. Linux and Mac).  On Windows it is advisable to install VirtualBox and run a Linux VM to utilise this codebase.
+The Gulp build system will only work correctly on \*nix machines (i.e. Linux and Mac).  On Windows it is advisable to install VirtualBox and run a Linux VM to utilise this codebase.
 
-### Installation on Ubuntu 14.04 ###
+### Installation ###
+
+Install manually, or with Docker (on Linux or OS X only).
+
+#### Ubuntu 14.04 ####
 
 Install global dependencies:
 
@@ -37,13 +41,28 @@ Clone the project and install local dependencies:
 * Install node local modules: `npm install`
 * Install front-end dependencies: `bower install`
 
+#### Docker ####
+
+*Note: Docker Compose is not supported on Windows*
+
+* Install [Docker and Compose](https://docs.docker.com/compose/install/)
+* Clone the repository : `git clone https://github.com/dscook/mean-stack-starter.git`
+* Change to the project base directory: `cd mean-stack-starter`
+* Start the Docker container: `docker-compose up`
+
+Once up, navigate to `localhost:8080` in a browser to view the app.
+
+Creating the image might take a while the first time. Maybe make a cup of tea?
+
+To **test**, run `docker-compose run web test`.
+
 ### Usage ###
 
 To run the code, note that changes in the back and front-end code will be reflected when utilising this command:
 
 * `gulp`
 
-Naviate to localhost:8080 in a browser to view the app.
+Navigate to `localhost:8080` in a browser to view the app.
 
 To run the end-to-end system tests:
 
