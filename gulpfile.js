@@ -258,7 +258,7 @@ gulp.task('build-copy', function () {
 });
 
 // Compiles Sass
-gulp.task('build-sass', function() {
+gulp.task('build-sass', function () {
     return gulp.src('./public/scss/app.scss')
             .pipe($.sass({
                 includePaths: sassPaths,

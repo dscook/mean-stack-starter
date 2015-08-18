@@ -48,3 +48,11 @@ Naviate to localhost:8080 in a browser to view the app.
 To run the end-to-end system tests:
 
 * `gulp tests`
+
+### Known Issues ###
+
+* On `bower install` the following error is thrown: `Error: EACCES, permission denied '<path-to-home-dir>/.config/configstore/bower-github.yml' You don't have access to this file.`
+
+Running the following command, replacing <username> and <path-to-home-dir> with the appropriate values should resolve the issue.
+
+`sudo chown -R <username>:<username> <path-to-home-dir>/.config/configstore/`
