@@ -53,6 +53,6 @@ To run the end-to-end system tests:
 
 * On `bower install` the following error is thrown: `Error: EACCES, permission denied '<path-to-home-dir>/.config/configstore/bower-github.yml' You don't have access to this file.`
 
-Running the following command, replacing `<username>` and `<path-to-home-dir>` with the appropriate values, should resolve the issue.
+Running the following command, replacing `<username>` with the appropriate values, should resolve the issue.
 
-`sudo chown -R <username>:<username> <path-to-home-dir>/.config/configstore/`
+`sudo chown -R <username>:<username> ~/.config/configstore/`
