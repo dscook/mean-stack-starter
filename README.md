@@ -17,9 +17,9 @@ An end-to-end MEAN stack template project with a pre-configured build system.  T
 
 The Gulp build system will only work correctly on *nix machines (i.e. Linux and Mac).  On Windows it is advisable to install VirtualBox and run a Linux VM to utilise this codebase.
 
-### Installation on Ubuntu 14.04 ###
+### Installation 
 
-Install global dependencies:
+#### Install global dependencies... on Ubuntu 14.04 ###
 
 * Install java: `sudo apt-get install default-jre`
 * Install git: `sudo apt-get install git`
@@ -30,7 +30,15 @@ Install global dependencies:
 * Install node global modules: `sudo npm install -g bower gulp protractor`
 * Install the latest version of the selenium web driver: `sudo webdriver-manager update`
 
-Clone the project and install local dependencies:
+#### Install global dependencies... on OSX ###
+
+* Install [Homebrew](http://brew.sh/) (if you haven't already got it): `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+* Install nodejs: `brew install nodejs`
+* Install npm: `brew install npm`
+* Install mongodb: `brew install mongodb`
+* Install node global modules: `sudo npm install -g bower gulp protractor`
+
+#### Clone the project and install local dependencies:
 
 * Clone the repository : `git clone https://github.com/dscook/mean-stack-starter.git`
 * Change to the project base directory: `cd mean-stack-starter`
